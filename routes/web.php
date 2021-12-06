@@ -30,12 +30,16 @@ Route::get('/about', function () {
     "jk"     => "JENIS KELAMIN : PRIA",
     "alamat"  => "ALAMAT : JL.Tabrani Ahmad",
     "email"  => "EMAIL : itsalifanugrah@gmail.com",
-    "img"    => "acin.png"
+    "img"    => "fuckincute.jpg"
     ]);
 });
 
 Route::get('/news', [BeritaController::class, 'index']);
 Route::get('/news/{news_posts:slug}',[BeritaController::class, 'show']);
 Route::get('/login',[LoginController::class, 'index']);
+Route::post('/login',[LoginController::class, 'authenticate']);
+
 Route::get('/register',[RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
+
+Route::get('/dashboard', [DashboardController::class, 'index']);
