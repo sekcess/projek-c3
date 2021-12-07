@@ -15,11 +15,11 @@ class BeritaController extends Controller
             ]);
     }
     
-    public function show(Berita $news_posts)
+    public function show(Berita $news_detil)
     {
         return view('news_detil', [
             "title" => "News Detil",
-            "news_posts" => $news_posts
+            "news_posts" => $news_detil
         ]);
     }
 }
