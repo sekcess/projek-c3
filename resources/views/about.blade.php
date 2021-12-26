@@ -7,7 +7,6 @@
         <h4>{{ $alamat }}</h4>
         <h4>{{ $email }}</h4>
 
-        
         <img src="img/{{ $img }}" alt="{{ $nama }}" width="500">
 
 @endsection
